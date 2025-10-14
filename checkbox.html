@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Checkbox Perhitungan</title>
+  <script>
+    function hitungTotal() {
+      let total = 0;
+      if (document.getElementById("html").checked) total += 50000;
+      if (document.getElementById("css").checked) total += 40000;
+      if (document.getElementById("js").checked) total += 60000;
+      document.getElementById("total").value = "Rp " + total;
+    }
+  </script>
+</head>
+<body>
+  <h2>Daftar Harga</h2>
+  <label><input type="checkbox" id="html" onclick="hitungTotal()"> Sepatu (Rp 50.000)</label><br>
+  <label><input type="checkbox" id="css" onclick="hitungTotal()"> Sendal (Rp 40.000)</label><br>
+  <label><input type="checkbox" id="js" onclick="hitungTotal()"> Sepatu Jawa (Rp 60.000)</label><br><br>
+  Total Bayar: <input type="text" id="total" readonly>
+</body>
+</html>

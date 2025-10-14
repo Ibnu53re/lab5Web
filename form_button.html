@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Button</title>
+  <script>
+    function tampilkanNama() {
+      let nama = document.forms["form1"]["nama"].value;
+      alert("Halo, " + nama + "!");
+    }
+  </script>
+</head>
+<body>
+  <h2>Form Button</h2>
+  <form name="form1">
+    Nama: <input type="text" name="nama">
+    <input type="button" value="Tampil" onclick="tampilkanNama()">
+  </form>
+</body>
+</html>

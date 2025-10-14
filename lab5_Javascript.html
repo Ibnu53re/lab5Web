@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mengenal JavaScript</title>
+  <script type="text/javascript" src="eksternal.js"></script>
+</head>
+<body>
+  <h1>Pengenalan JavaScript</h1>
+  <h3>Contoh document.write dan console.log</h3>
+  <script>
+    document.write("<p>Hello World dari JavaScript!</p>");
+    console.log("Hello World dari Console!");
+  </script>
+
+  <hr>
+  <h3>Contoh Alert & Prompt</h3>
+  <button onclick="tampilkanAlert()">Tampilkan Alert</button>
+  <button onclick="tampilkanPrompt()">Tampilkan Prompt</button>
+
+  <hr>
+  <h3>Contoh Fungsi dan Aritmatika</h3>
+  <script>
+    function hitung(a, b) {
+      return a + b;
+    }
+    document.write("Hasil penjumlahan 5 + 10 = " + hitung(5, 10));
+  </script>
+</body>
+</html>

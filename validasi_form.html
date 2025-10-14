@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Validasi Form</title>
+  <script>
+    function validasiForm() {
+      let nama = document.forms["formku"]["nama"].value;
+      let email = document.forms["formku"]["email"].value;
+      let pesan = document.forms["formku"]["pesan"].value;
+
+      if (nama == "" || email == "" || pesan == "") {
+        alert("Semua kolom wajib diisi!");
+        return false;
+      }
+      let at = email.indexOf("@");
+      let dot = email.lastIndexOf(".");
+      if (at < 1 || dot < at + 2 || dot + 2 >= email.length) {
+        alert("Alamat email tidak valid!");
+        return false;
+      }
+      alert("Form berhasil dikirim!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Form Validasi</h2>
+  <form name="formku" onsubmit="return validasiForm()">
+    Nama:<br><input type="text" name="nama"><br><br>
+    Email:<br><input type="text" name="email"><br><br>
+    Pesan:<br><textarea name="pesan"></textarea><br><br>
+    <input type="submit" value="Kirim">
+  </form>
+</body>
+</html>
